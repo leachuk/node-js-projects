@@ -9,7 +9,7 @@ function test1(request,response){
 function signupUser(request,response){
 	var useremail = request.body.email;
 	var userpassword = request.body.password;
-	var databasename = "testname";
+	var databasename = useremail;
 	console.log("Signup with email["+ useremail +"], password["+ userpassword +"]");
 	
 	couchDbHandlers.createNewUserDatabase(databasename,useremail,userpassword, response);
